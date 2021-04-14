@@ -1,29 +1,27 @@
 /**
- * 
- */
-
-/**
- * @author Arturo
+ * @author Arturo Polanco
  *
  */
 public final class Hexadecimal {
 
 	/**
+	 * Converts a hexadecimal number to binary
 	 * 
 	 * @param input
+	 * @return binary representation of number
 	 */
 	public static String convertToBinary(String input) {
-		StringBuilder output = new StringBuilder(input.toUpperCase());
+		StringBuilder inputUpper = new StringBuilder(input.toUpperCase());
 		String chunk;
 		StringBuilder result = new StringBuilder();
 
-		while (output.length() % 4 != 0) {
-			output.insert(0, "0");
+		while (inputUpper.length() % 4 != 0) {
+			inputUpper.insert(0, "0");
 		}
 
-		for (int i = 0; i < output.length(); i += 4) {
+		for (int i = 0; i < inputUpper.length(); i += 4) {
 			// break into 4 character string
-			chunk = output.substring(i, i + 4);
+			chunk = inputUpper.substring(i, i + 4);
 			System.out.println(chunk);
 
 			// convert each 4 character string to decimal and then binary value
@@ -37,8 +35,10 @@ public final class Hexadecimal {
 	}
 
 	/**
+	 * Converts a hexadecimal number to decimal
 	 * 
 	 * @param input
+	 * @return string value of decimal
 	 */
 	public static String convertToDecimal(String input) {
 		input = input.toUpperCase();

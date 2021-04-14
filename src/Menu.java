@@ -2,11 +2,9 @@ import java.awt.event.*;
 import javax.swing.*;
 
 /**
+ * GUI for Number conversion for binary, decimal and hexadecimal numbers
  * 
- */
-
-/**
- * @author Arturo
+ * @author Arturo Polanco
  *
  */
 public class Menu extends JFrame implements ActionListener {
@@ -19,11 +17,15 @@ public class Menu extends JFrame implements ActionListener {
 	JButton hexBIN;
 	JButton hexDEC;
 
+	/**
+	 * creates and shows the GUI 
+	 */
 	public Menu() {
 		setVisible(true);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		// Create GUI artifacts
 		panel = new JPanel();
 		decBIN = new JButton();
 		decHEX = new JButton();
@@ -32,6 +34,7 @@ public class Menu extends JFrame implements ActionListener {
 		hexBIN = new JButton();
 		hexDEC = new JButton();
 
+		// Label buttons
 		binDEC.setText("Bin to Dec");
 		binHEX.setText("Bin to Hex");
 		decBIN.setText("Dec to Bin");
@@ -39,6 +42,7 @@ public class Menu extends JFrame implements ActionListener {
 		hexBIN.setText("Hex to Bin");
 		hexDEC.setText("Hex to Dec");
 
+		// Attach actions to buttons
 		binDEC.addActionListener(this);
 		binHEX.addActionListener(this);
 		decBIN.addActionListener(this);
@@ -46,6 +50,7 @@ public class Menu extends JFrame implements ActionListener {
 		hexBIN.addActionListener(this);
 		hexDEC.addActionListener(this);
 
+		// Add buttons to GUI
 		panel.add(binDEC);
 		panel.add(binHEX);
 		panel.add(decBIN);
@@ -57,6 +62,9 @@ public class Menu extends JFrame implements ActionListener {
 		pack();
 	}
 
+	/**
+	 * Actions for the buttons
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String input = JOptionPane.showInputDialog(null);

@@ -1,9 +1,5 @@
 /**
- * 
- */
-
-/**
- * @author Arturo
+ * @author Arturo Polanco
  *
  */
 public final class Decimal {
@@ -11,7 +7,8 @@ public final class Decimal {
 	/**
 	 * Converts a decimal number to binary
 	 * 
-	 * @param input
+	 * @param input String representation of a number
+	 * @return the decimal value of the number
 	 */
 	public static String convertToBinary(String input) {
 		int dec = Integer.parseInt(input);
@@ -43,7 +40,8 @@ public final class Decimal {
 	/**
 	 * Converts a decimal number to hexadecimal
 	 * 
-	 * @param input
+	 * @param input String representation of a number
+	 * @return the hexadecimal value of the number
 	 */
 	public static String convertToHexadecimal(String input) {
 		int dec = Integer.parseInt(input);
